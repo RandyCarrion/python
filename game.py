@@ -43,7 +43,7 @@ def is_victory(icon):
         board[2]==icon and board[4]== icon and board[6]==icon or \
         board[0]==icon and board[3]== icon and board[6]==icon or \
         board[1]==icon and board[4]== icon and board[7]==icon or \
-        board[2]==icon and board[5]== icon and board[8]==icon): 
+        board[2]==icon and board[5]== icon and board[8]==icon):
         return True
     else:
         return False
@@ -61,10 +61,17 @@ while True:
     if is_victory("X"):
         print("X wins the game!!")
         break
+    elif is_draw():
+        print_board()
+        print("You done goofed the game")
+        break
     player_move("O")
+    print_board()
     if is_victory("O"):
         print("O wins the game!!")
         break
-    
+    elif is_draw():
+        print("You done goofed the game")
+        break
     
     
