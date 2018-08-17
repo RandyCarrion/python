@@ -3,6 +3,7 @@ import random
 class Coin:  
     
     def __init__(self, rare=False, clean = True, heads = True, **kwargs):
+        #these are keyword arguments, blueprint of the class
         
         for key, value in kwargs.items():
             setattr (self,key,value)
@@ -42,7 +43,7 @@ class Coin:
         print("Coin spent!")
         
         
-class one_pence(Coin):
+class one_pence(Coin):#class categories
     def __init__(self):
         
         data = {"original_value": 0.01,
